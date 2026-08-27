@@ -16,10 +16,21 @@ export const Footer: React.FC = () => {
           
           {/* Column 1: Academic Project Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2.5 cursor-pointer" onClick={scrollToTop}>
-              <div className="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-lg">
-                <Anchor className="w-4 h-4 text-amber-300" />
-              </div>
+            <div className="flex items-center gap-3 cursor-pointer" onClick={scrollToTop}>
+              {projectMeta.logoUrl ? (
+                <div className="h-8 px-2 py-0.5 rounded-lg bg-white flex items-center justify-center shadow-sm border border-zinc-200">
+                  <img
+                    src={projectMeta.logoUrl}
+                    alt="Port of Belize Limited Logo"
+                    className="h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              ) : (
+                <div className="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-lg">
+                  <Anchor className="w-4 h-4 text-amber-300" />
+                </div>
+              )}
               <span className="font-black text-white text-base">
                 {projectMeta.organizationShort} MIS Case Study
               </span>

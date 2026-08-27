@@ -78,11 +78,22 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGuide }) => {
           <div 
             id="brand-logo-container"
             onClick={() => scrollToSection('home')}
-            className="flex items-center gap-3.5 cursor-pointer group"
+            className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center text-white shadow-[0_0_15px_rgba(99,102,241,0.4)] border border-indigo-400/40 group-hover:scale-105 transition-transform">
-              <Anchor className="w-5 h-5 text-white" />
-            </div>
+            {projectMeta.logoUrl ? (
+              <div className="h-10 px-2 py-1 rounded-xl bg-white flex items-center justify-center shadow-md border border-zinc-200 group-hover:scale-105 transition-transform overflow-hidden">
+                <img 
+                  src={projectMeta.logoUrl} 
+                  alt="Port of Belize Limited Logo" 
+                  className="h-full object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            ) : (
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center text-white shadow-[0_0_15px_rgba(99,102,241,0.4)] border border-indigo-400/40 group-hover:scale-105 transition-transform">
+                <Anchor className="w-5 h-5 text-white" />
+              </div>
+            )}
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <span className="font-black tracking-tight text-white text-base sm:text-lg font-sans">

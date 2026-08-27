@@ -44,19 +44,32 @@ export const Hero: React.FC = () => {
 
             <div className="relative z-10 space-y-8">
               
-              {/* Academic Project Badge */}
-              <div className="flex flex-wrap items-center gap-3">
-                <div className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
-                  <span>{projectMeta.institutionShort} Academic Case Study</span>
+              {/* Academic Project Badge & Official Logo */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-3.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
+                    <span>{projectMeta.institutionShort} Academic Case Study</span>
+                  </div>
+                  <span className="text-zinc-500 text-[10px] uppercase tracking-widest font-mono font-semibold">
+                    Course: {projectMeta.courseCode} ({projectMeta.courseYear})
+                  </span>
+                  <span className="text-zinc-600">•</span>
+                  <span className="text-zinc-400 text-[10px] uppercase tracking-widest font-mono font-semibold">
+                    Group: {projectMeta.groupName}
+                  </span>
                 </div>
-                <span className="text-zinc-500 text-[10px] uppercase tracking-widest font-mono font-semibold">
-                  Course: {projectMeta.courseCode} ({projectMeta.courseYear})
-                </span>
-                <span className="text-zinc-600">•</span>
-                <span className="text-zinc-400 text-[10px] uppercase tracking-widest font-mono font-semibold">
-                  Group: {projectMeta.groupName}
-                </span>
+
+                {projectMeta.logoUrl && (
+                  <div className="self-start sm:self-auto bg-white/95 px-3 py-1.5 rounded-2xl shadow-lg border border-zinc-200 flex items-center shrink-0">
+                    <img
+                      src={projectMeta.logoUrl}
+                      alt="Port of Belize Limited Logo"
+                      className="h-9 sm:h-11 object-contain"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Headings */}

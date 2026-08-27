@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Users, Crown, FileText, CheckCircle2, BookOpen, Layers, Edit3, ArrowRight, ExternalLink } from 'lucide-react';
-import { groupMembers, groupCollaborationData, projectMeta } from '../data/projectData';
+import { Users, Crown, FileText, ExternalLink } from 'lucide-react';
+import { groupMembers } from '../data/projectData';
 import { StudentMember } from '../types';
 import { ResumeModal } from './ResumeModal';
 
@@ -26,7 +26,7 @@ export const AboutUs: React.FC = () => {
         </div>
 
         {/* Group Members Grid (Standardized 3:5 Card Template for Every Member) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {groupMembers.map((member) => {
             return (
               <div
@@ -106,68 +106,6 @@ export const AboutUs: React.FC = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Group Collaboration & Methodology Section Bento Card */}
-        <div className="bg-zinc-900/40 text-white rounded-3xl p-8 sm:p-10 border border-zinc-800 shadow-2xl space-y-8 backdrop-blur-md">
-          <div className="max-w-3xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-widest font-mono">
-              <Layers className="w-3.5 h-3.5" />
-              <span>Team Collaboration & Research Matrix</span>
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Academic Collaboration & Work Breakdown
-            </h3>
-            <p className="text-sm text-zinc-300 leading-relaxed">
-              {groupCollaborationData.purpose}
-            </p>
-          </div>
-
-          {/* Responsibility Matrix Cards in Bento layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
-            {groupCollaborationData.methodology.map((item, index) => (
-              <div 
-                key={index}
-                className="p-5 rounded-2xl bg-zinc-950/70 border border-zinc-800/80 space-y-2.5 flex flex-col justify-between"
-              >
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-amber-400 font-bold uppercase tracking-widest">
-                      Area 0{index + 1}
-                    </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-900 text-indigo-300 border border-indigo-500/20">
-                      {item.lead}
-                    </span>
-                  </div>
-                  <h4 className="text-sm font-bold text-white">
-                    {item.area}
-                  </h4>
-                  <p className="text-xs text-zinc-400 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-                
-                <div className="pt-2 border-t border-zinc-800/80 flex items-center gap-1.5 text-[11px] text-emerald-400 font-mono font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Completed & Reviewed</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Student Editable Notification Banner */}
-          <div className="p-4 rounded-2xl bg-zinc-950/90 border border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-zinc-300">
-            <div className="flex items-center gap-2">
-              <Edit3 className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>
-                <strong className="text-white">Student Note:</strong> All names, IDs, images, and CV items are easily editable in <code className="bg-zinc-900 px-1.5 py-0.5 rounded text-amber-300 font-mono border border-zinc-800">src/data/projectData.ts</code>.
-              </span>
-            </div>
-            <div className="text-[11px] font-mono text-zinc-500">
-              Group: {projectMeta.groupName}
-            </div>
-          </div>
-
         </div>
 
       </div>

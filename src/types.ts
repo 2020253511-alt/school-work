@@ -67,6 +67,7 @@ export interface ProjectMetadata {
   organizationType: string;
   systemName: string;
   systemShort: string;
+  logoUrl?: string;
   mission?: string;
   vision?: string;
 }

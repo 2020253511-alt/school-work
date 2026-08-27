@@ -11,6 +11,9 @@
  */
 
 import { ProjectMetadata, StudentMember, ServiceItem, SystemTool, BusinessObjective } from '../types';
+import pblLogo from '../assets/images/port_of_belize_logo_1787871180067.jpg';
+
+export { pblLogo };
 
 export const projectMeta: ProjectMetadata = {
   websiteName: "Management Information System",
@@ -33,6 +36,7 @@ export const projectMeta: ProjectMetadata = {
   organizationType: "Private, For-Profit Organization",
   systemName: "Management Information System (MIS)",
   systemShort: "PBL-MIS",
+  logoUrl: pblLogo,
   mission: "To provide reliable, sustainable, efficient, and high-quality logistics services to valued customers through skilled and engaged employees, supported by technology.",
   vision: "To be the port of choice for Belizean shippers, facilitating economic growth, offering innovative customer-centric services, and providing employees with rewarding careers.",
 };

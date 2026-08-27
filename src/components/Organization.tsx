@@ -114,6 +114,17 @@ export const Organization: React.FC = () => {
             </div>
 
             <div className="lg:col-span-4 bg-zinc-950/80 border border-zinc-800 text-white p-6 sm:p-7 rounded-2xl shadow-xl space-y-4">
+              {projectMeta.logoUrl && (
+                <div className="bg-white rounded-2xl p-4 border border-zinc-200 shadow-sm flex items-center justify-center">
+                  <img
+                    src={projectMeta.logoUrl}
+                    alt="Port of Belize Limited Logo"
+                    className="max-h-24 w-auto object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              )}
+
               <div className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold flex items-center gap-2">
                 <Globe2 className="w-4 h-4" />
                 <span>Economic Significance</span>
