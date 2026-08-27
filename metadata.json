@@ -1,0 +1,7 @@
+{
+  "name": "Port of Belize Limited - Information Systems Project",
+  "description": "Academic Information Systems and Business Value Analysis for Port of Belize Limited (PBL) Management Information System (MIS) and Shipping Agent Portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
