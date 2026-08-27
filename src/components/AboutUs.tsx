@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Crown, FileText, CheckCircle2, BookOpen, Layers, Edit3, ArrowRight } from 'lucide-react';
+import { Users, Crown, FileText, CheckCircle2, BookOpen, Layers, Edit3, ArrowRight, ExternalLink } from 'lucide-react';
 import { groupMembers, groupCollaborationData, projectMeta } from '../data/projectData';
 import { StudentMember } from '../types';
 import { ResumeModal } from './ResumeModal';
@@ -78,11 +78,11 @@ export const AboutUs: React.FC = () => {
                 </div>
 
                 {/* Card Action Button */}
-                <div className="p-4 bg-zinc-950/60 border-t border-zinc-800/80">
+                <div className="p-4 bg-zinc-950/60 border-t border-zinc-800/80 flex items-center gap-2">
                   <button
                     id={`btn-view-cv-${member.id}`}
                     onClick={() => setSelectedMember(member)}
-                    className={`w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
+                    className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
                       member.isLeader
                         ? 'bg-amber-500 hover:bg-amber-400 text-zinc-950 shadow-[0_0_15px_rgba(245,158,11,0.3)]'
                         : 'bg-zinc-900 hover:bg-indigo-600 text-zinc-200 hover:text-white border border-zinc-800 shadow-sm'
@@ -91,6 +91,16 @@ export const AboutUs: React.FC = () => {
                     <FileText className="w-3.5 h-3.5" />
                     <span>View Academic Profile</span>
                   </button>
+                  <a
+                    id={`btn-open-pdf-${member.id}`}
+                    href={member.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Open PDF in new tab"
+                    className="p-2.5 rounded-2xl bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 transition-colors shrink-0 flex items-center justify-center cursor-pointer"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
 
               </div>

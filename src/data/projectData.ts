@@ -49,6 +49,8 @@ export const groupMembers: StudentMember[] = [
     role: "Project Leader & Information Systems Analyst",
     isLeader: true,
     photoUrl: "https://lh3.googleusercontent.com/d/1jk2gfkeaysZpt6Hu5pPM6f49ZxYfDS4N",
+    pdfUrl: "https://drive.google.com/file/d/1Hc7bhnKs525LxCdGDKlo9Gev_zP9wich/view?usp=sharing",
+    pdfFileId: "1Hc7bhnKs525LxCdGDKlo9Gev_zP9wich",
     bio: "Undergraduate student specializing in Information Technology and Systems Analysis. Coordinated group research, synthesis of MIS business value, and overall project governance.",
     responsibilities: [
       "Project planning, milestone coordination, and academic formatting",
@@ -71,6 +73,8 @@ export const groupMembers: StudentMember[] = [
     role: "Lead Front-End Designer & UI/UX Developer",
     isLeader: false,
     photoUrl: "https://lh3.googleusercontent.com/d/1maIz5VFjG4smdTacD76mXZPgYtx1zqpG",
+    pdfUrl: "https://drive.google.com/file/d/15voP43RQmYb1DRFkPRWht-OpUj_4UpQb/view?usp=sharing",
+    pdfFileId: "15voP43RQmYb1DRFkPRWht-OpUj_4UpQb",
     bio: "Enthusiastic developer focusing on modern web interfaces, responsive accessibility, and interactive digital experiences for enterprise case studies.",
     responsibilities: [
       "Responsive UI/UX architecture and Tailwind CSS maritime design system",
@@ -93,6 +97,8 @@ export const groupMembers: StudentMember[] = [
     role: "Maritime Logistics & Organization Researcher",
     isLeader: false,
     photoUrl: "https://lh3.googleusercontent.com/d/1N_yfj58rK1U1FwHDWzaKtOqbYZ1pS75w",
+    pdfUrl: "https://drive.google.com/file/d/1YQq8bS8CjLg-EAhSnb232PBFcsqXxObi/view?usp=sharing",
+    pdfFileId: "1YQq8bS8CjLg-EAhSnb232PBFcsqXxObi",
     bio: "Focuses on supply chain digital transformation, Caribbean maritime port infrastructure, and organizational service delivery workflows.",
     responsibilities: [
       "Gathering verified Port of Belize Limited operational background and services",
@@ -115,6 +121,8 @@ export const groupMembers: StudentMember[] = [
     role: "Technical Systems & Security Analyst",
     isLeader: false,
     photoUrl: "https://lh3.googleusercontent.com/d/1Sw6Lp084qBvPMzlgRtevBeuZVVmjiEq1",
+    pdfUrl: "https://drive.google.com/file/d/1F4FpcZVJp4JHoiUSxHqSAHLvzXi7Ogix/view?usp=sharing",
+    pdfFileId: "1F4FpcZVJp4JHoiUSxHqSAHLvzXi7Ogix",
     bio: "Passionate about network security, client-server architectures, and enterprise software integration in high-throughput transportation hubs.",
     responsibilities: [
       "Technical analysis of the Shipping Agent Portal desktop software architecture",

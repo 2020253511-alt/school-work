@@ -5,6 +5,8 @@ export interface StudentMember {
   role: string;
   isLeader: boolean;
   photoUrl: string;
+  pdfUrl: string;
+  pdfFileId?: string;
   bio: string;
   responsibilities: string[];
   resume: {
