@@ -41,6 +41,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ member, onClose }) => 
               alt={member.name}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (member.photoUrl.includes('lh3.googleusercontent.com/d/')) {
+                  const fileId = member.photoUrl.split('lh3.googleusercontent.com/d/')[1];
+                  target.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+                }
+              }}
             />
             {member.isLeader && (
               <div className="absolute top-1 right-1 bg-amber-500 text-zinc-950 text-[9px] font-black px-1.5 py-0.5 rounded shadow">
@@ -57,10 +64,6 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ member, onClose }) => 
                   GROUP LEADER
                 </span>
               )}
-            </div>
-            
-            <div className="text-xs font-mono text-indigo-400 font-semibold">
-              {member.studentId}
             </div>
             
             <div className="text-sm font-medium text-zinc-300">

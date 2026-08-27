@@ -65,13 +65,13 @@ export const Hero: React.FC = () => {
                   id="hero-main-title" 
                   className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-[1.1] font-sans"
                 >
-                  {projectMeta.organizationName}
+                  Management Information System
                 </h1>
                 <p 
                   id="hero-sub-title" 
                   className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-violet-300 to-amber-200"
                 >
-                  Information Systems & Strategic Business Value Analysis
+                  Port of Belize Limited • Information Systems & Strategic Business Value Analysis
                 </p>
               </div>
 

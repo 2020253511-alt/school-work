@@ -49,7 +49,7 @@ export const ContactUs: React.FC = () => {
             Contact Our Academic Project Team
           </h2>
           <p className="text-sm sm:text-base text-zinc-400 leading-relaxed">
-            Form for students, faculty, and project evaluator ({projectMeta.lecturerEmail}) to inquire about our Port of Belize Limited MIS research.
+            Form for students, faculty, and project evaluator ({projectMeta.lecturerName} — <span className="text-indigo-400 font-mono">{projectMeta.lecturerEmail}</span>) to inquire about our Port of Belize Limited MIS research.
           </p>
         </div>
 
@@ -165,7 +165,7 @@ export const ContactUs: React.FC = () => {
                       id="contact-name"
                       type="text"
                       required
-                      placeholder="e.g. Dr. K. Ryan / John Doe"
+                      placeholder="e.g. Mr. Jevon Mckenzie / Evaluator"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-indigo-500 transition-all shadow-xs"

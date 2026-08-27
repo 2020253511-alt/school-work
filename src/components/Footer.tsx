@@ -49,6 +49,10 @@ export const Footer: React.FC = () => {
                 <span className="text-zinc-200 font-mono">{projectMeta.courseYear}</span>
               </li>
               <li>
+                <span className="text-zinc-500 block">Lecturer:</span>
+                <span className="text-zinc-200">{projectMeta.lecturerName}</span>
+              </li>
+              <li>
                 <span className="text-zinc-500 block">Group:</span>
                 <span className="text-zinc-200 font-mono">{projectMeta.groupName}</span>
               </li>

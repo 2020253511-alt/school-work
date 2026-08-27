@@ -13,14 +13,15 @@
 import { ProjectMetadata, StudentMember, ServiceItem, SystemTool, BusinessObjective } from '../types';
 
 export const projectMeta: ProjectMetadata = {
+  websiteName: "Management Information System",
   // EDIT HERE: Course & Institutional Details
-  courseName: "[INSERT COURSE NAME]", // e.g. "CMPS 2014: Management Information Systems"
+  courseName: "Management Information Systems",
   courseCode: "CMPS 2014",
   courseYear: 2026,
-  groupName: "[INSERT GROUP NAME]", // e.g. "Group 4 - Digital Logistics Analysts"
-  groupLeaderName: "[GROUP LEADER NAME]", // e.g. "Alexandria Vance"
-  lecturerName: "Mr. K. Ryan",
-  lecturerEmail: "kryan@ub.edu.bz",
+  groupName: "Group 4 - Digital Logistics Analysts",
+  groupLeaderName: "Student 1",
+  lecturerName: "Jevon Mckenzie",
+  lecturerEmail: "Jevon.mckenzie@ub.edu.bz",
   institutionName: "University of Belize",
   institutionShort: "UB",
   academicTerm: "Semester 1 — Academic Year 2026",
@@ -43,11 +44,11 @@ export const projectMeta: ProjectMetadata = {
 export const groupMembers: StudentMember[] = [
   {
     id: "member-1",
-    name: "[Student Name — Group Leader]",
-    studentId: "[Student ID: 20260001]",
+    name: "Student 1",
+    studentId: "",
     role: "Project Leader & Information Systems Analyst",
     isLeader: true,
-    photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+    photoUrl: "https://lh3.googleusercontent.com/d/1jk2gfkeaysZpt6Hu5pPM6f49ZxYfDS4N",
     bio: "Undergraduate student specializing in Information Technology and Systems Analysis. Coordinated group research, synthesis of MIS business value, and overall project governance.",
     responsibilities: [
       "Project planning, milestone coordination, and academic formatting",
@@ -65,11 +66,11 @@ export const groupMembers: StudentMember[] = [
   },
   {
     id: "member-2",
-    name: "[Student Name]",
-    studentId: "[Student ID: 20260002]",
+    name: "Student 2",
+    studentId: "",
     role: "Lead Front-End Designer & UI/UX Developer",
     isLeader: false,
-    photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+    photoUrl: "https://lh3.googleusercontent.com/d/1maIz5VFjG4smdTacD76mXZPgYtx1zqpG",
     bio: "Enthusiastic developer focusing on modern web interfaces, responsive accessibility, and interactive digital experiences for enterprise case studies.",
     responsibilities: [
       "Responsive UI/UX architecture and Tailwind CSS maritime design system",
@@ -87,11 +88,11 @@ export const groupMembers: StudentMember[] = [
   },
   {
     id: "member-3",
-    name: "[Student Name]",
-    studentId: "[Student ID: 20260003]",
+    name: "Student 3",
+    studentId: "",
     role: "Maritime Logistics & Organization Researcher",
     isLeader: false,
-    photoUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600&auto=format&fit=crop",
+    photoUrl: "https://lh3.googleusercontent.com/d/1N_yfj58rK1U1FwHDWzaKtOqbYZ1pS75w",
     bio: "Focuses on supply chain digital transformation, Caribbean maritime port infrastructure, and organizational service delivery workflows.",
     responsibilities: [
       "Gathering verified Port of Belize Limited operational background and services",
@@ -109,11 +110,11 @@ export const groupMembers: StudentMember[] = [
   },
   {
     id: "member-4",
-    name: "[Student Name]",
-    studentId: "[Student ID: 20260004]",
+    name: "Student 4",
+    studentId: "",
     role: "Technical Systems & Security Analyst",
     isLeader: false,
-    photoUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+    photoUrl: "https://lh3.googleusercontent.com/d/1Sw6Lp084qBvPMzlgRtevBeuZVVmjiEq1",
     bio: "Passionate about network security, client-server architectures, and enterprise software integration in high-throughput transportation hubs.",
     responsibilities: [
       "Technical analysis of the Shipping Agent Portal desktop software architecture",

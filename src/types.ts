@@ -48,6 +48,7 @@ export interface BusinessObjective {
 }
 
 export interface ProjectMetadata {
+  websiteName?: string;
   courseName: string;
   courseCode: string;
   courseYear: number;
