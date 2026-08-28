@@ -11,13 +11,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGuide }) => {
   const { theme, isDark, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('about-us');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = ['home', 'about-us', 'organization', 'information-system', 'contact-us'];
+      const sections = ['about-us', 'organization', 'information-system', 'contact-us'];
       const scrollPosition = window.scrollY + 120;
 
       for (const sectionId of sections) {
@@ -38,7 +38,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGuide }) => {
   }, []);
 
   const navLinks = [
-    { id: 'home', label: 'Home', icon: BookOpen },
     { id: 'about-us', label: 'About Us', icon: Users },
     { id: 'organization', label: 'Organization', icon: Building },
     { id: 'information-system', label: 'Information System', icon: Cpu },
@@ -77,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGuide }) => {
           {/* Brand / Logo mark */}
           <div 
             id="brand-logo-container"
-            onClick={() => scrollToSection('home')}
+            onClick={() => scrollToSection('about-us')}
             className="flex items-center gap-3 cursor-pointer group"
           >
             {projectMeta.logoUrl ? (

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { HomeIntro } from './components/HomeIntro';
 import { AboutUs } from './components/AboutUs';
 import { Organization } from './components/Organization';
 import { InformationSystem } from './components/InformationSystem';
@@ -24,25 +22,19 @@ export default function App() {
         {/* Main Content Sections */}
         <main className="flex-1">
           
-          {/* 1. Hero Section (Home) */}
-          <Hero />
-
-          {/* 2. Academic Project Introduction & 4 Navigation Pillars */}
-          <HomeIntro />
-
-          {/* 3. About Us (Student Team Profiles, Resumes & Collaboration Matrix) */}
+          {/* 1. About Us (Student Team Profiles, Resumes & Collaboration Matrix) */}
           <AboutUs />
 
-          {/* 4. Organization Profile (PBL, 10 Core Services, 10 Maritime Services, Mission/Vision) */}
+          {/* 2. Organization Profile (PBL, 10 Core Services, 10 Maritime Services, Mission/Vision) */}
           <Organization />
 
-          {/* 5. Information System (MIS, Desktop Agent Portal, Web Tools, Architecture) */}
+          {/* 3. Information System (Navis Octopi TOS, Desktop Agent Portal, Web Tools, Architecture) */}
           <InformationSystem />
 
-          {/* 6. Strategic Business Value (Laudon 6 Objectives, Impact Matrix, Synthesis Table, Conclusion) */}
+          {/* 4. Strategic Business Value (Laudon 6 Objectives, Impact Matrix, Synthesis Table, Conclusion) */}
           <BusinessValue />
 
-          {/* 7. Contact Us (UB Campus Map FIRST ABOVE Form, Client-Validated Submission) */}
+          {/* 5. Contact Us (UB Campus Map, Contact Details & Evaluation Submission) */}
           <ContactUs />
 
         </main>

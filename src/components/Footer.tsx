@@ -105,7 +105,6 @@ export const Footer: React.FC = () => {
               Quick Navigation
             </h4>
             <div className="grid grid-cols-1 gap-1.5 text-xs">
-              <a href="#home" className="text-zinc-400 hover:text-white transition-colors">Home Page</a>
               <a href="#about-us" className="text-zinc-400 hover:text-white transition-colors">About Us & Team</a>
               <a href="#organization" className="text-zinc-400 hover:text-white transition-colors">Port Organization Profile</a>
               <a href="#information-system" className="text-zinc-400 hover:text-white transition-colors">Information System & Business Value</a>

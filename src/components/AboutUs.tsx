@@ -8,8 +8,13 @@ export const AboutUs: React.FC = () => {
   const [selectedMember, setSelectedMember] = useState<StudentMember | null>(null);
 
   return (
-    <section id="about-us" className="py-20 bg-zinc-950 text-zinc-100 border-b border-zinc-900">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about-us" className="pt-28 pb-20 lg:pt-36 lg:pb-24 bg-zinc-950 text-zinc-100 border-b border-zinc-900 relative">
+      {/* Background Decorative Grid & Subtle Ambient Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-violet-600/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Section Heading */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
