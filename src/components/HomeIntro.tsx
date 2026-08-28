@@ -51,7 +51,7 @@ export const HomeIntro: React.FC = () => {
       icon: Users,
       accentColor: 'border-zinc-800 hover:border-violet-500/50',
       iconBg: 'bg-violet-500/10 text-violet-400 border border-violet-500/20',
-      badge: '4 Student Analysts'
+      badge: '5 Student Analysts'
     },
     {
       id: 'card-contact',

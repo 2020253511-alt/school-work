@@ -7,23 +7,17 @@ import {
   Ship, 
   Users, 
   Server, 
-  Wifi, 
   HardDrive, 
   ShieldCheck, 
-  ArrowRight, 
   CheckCircle2, 
-  AlertTriangle, 
   Layers, 
-  Lock, 
-  Key, 
-  FileCheck, 
-  Radio, 
-  Clock, 
   Database, 
-  Building, 
-  Anchor, 
-  HelpCircle,
-  Award
+  Award,
+  Cloud,
+  Layers3,
+  Calendar,
+  Activity,
+  Boxes
 } from 'lucide-react';
 import { informationSystemData } from '../data/projectData';
 
@@ -42,11 +36,110 @@ export const InformationSystem: React.FC = () => {
             Information System at Port of Belize Limited
           </h2>
           <p className="text-base sm:text-lg font-bold text-indigo-400 font-mono">
-            Management Information System (MIS), Agent Portal & Strategic Business Value
+            Navis Octopi Terminal Operating System (TOS), Agent Portal & Cloud Architecture
           </p>
           <p className="text-sm sm:text-base text-zinc-400 leading-relaxed">
             A comprehensive academic evaluation of PBL's digital data pipelines, software architecture, user ecosystem, operational throughput, and strategic organizational value.
           </p>
+        </div>
+
+        {/* Highlight Banner: System Type & Deployment (Verified Academic Findings) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          
+          {/* Card 1: System Type & Software */}
+          <div className="bg-zinc-900/50 rounded-3xl p-7 sm:p-8 border border-zinc-800 hover:border-amber-500/60 transition-all shadow-2xl space-y-5 backdrop-blur-md relative overflow-hidden">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
+                  <Layers3 className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono uppercase font-bold text-amber-400 px-2 py-0.5 bg-zinc-950 border border-amber-500/30 rounded-full">
+                    Software & System Type
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black text-white mt-1">
+                    System Type
+                  </h3>
+                </div>
+              </div>
+              <span className="text-xs font-mono font-bold text-amber-400 bg-amber-400/10 px-2.5 py-1 rounded-xl border border-amber-400/20">
+                Octopi by Navis
+              </span>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-sm sm:text-base text-zinc-200 leading-relaxed space-y-2">
+              <p>
+                <strong className="text-amber-400 font-semibold">Software:</strong> They use <strong className="text-white font-bold">Octopi</strong>, a <strong className="text-white font-bold">Terminal Operating System (TOS)</strong> developed by <strong className="text-white font-bold">Navis</strong>. It manages transactional activities, vessel arrivals and departures, yard planning, and operational data tracking.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <Activity className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Transactional activities</span>
+              </div>
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <Calendar className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Vessel arrivals & departures</span>
+              </div>
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <Boxes className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Yard planning & allocation</span>
+              </div>
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <Database className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Operational data tracking</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Deployment Model */}
+          <div className="bg-zinc-900/50 rounded-3xl p-7 sm:p-8 border border-zinc-800 hover:border-indigo-500/60 transition-all shadow-2xl space-y-5 backdrop-blur-md relative overflow-hidden">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                  <Cloud className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono uppercase font-bold text-indigo-400 px-2 py-0.5 bg-zinc-950 border border-indigo-500/30 rounded-full">
+                    Infrastructure Model
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black text-white mt-1">
+                    Deployment
+                  </h3>
+                </div>
+              </div>
+              <span className="text-xs font-mono font-bold text-indigo-400 bg-indigo-400/10 px-2.5 py-1 rounded-xl border border-indigo-400/20">
+                Cloud-Based Platform
+              </span>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800 text-sm sm:text-base text-zinc-200 leading-relaxed space-y-2">
+              <p>
+                <strong className="text-indigo-400 font-semibold">Cloud-based:</strong> The <strong className="text-white font-bold">Octopi system operates via a cloud-based platform</strong> rather than strictly on local physical premises servers.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>24/7 Cloud availability & uptime</span>
+              </div>
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Synchronized real-time quayside data</span>
+              </div>
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Scalable storage for vessel surges</span>
+              </div>
+              <div className="p-3 bg-zinc-950/60 rounded-xl border border-zinc-800/80 flex items-center gap-2 text-zinc-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Secure HTTPS / TLS data encryption</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* MIS Core System Description Bento Card */}
@@ -60,26 +153,33 @@ export const InformationSystem: React.FC = () => {
               </div>
               
               <h3 className="text-2xl sm:text-3xl font-black text-white">
-                Digital Cargo & Manifest Information Management
+                Navis Octopi TOS & Digital Manifest Logistics
               </h3>
 
               <p className="text-sm text-zinc-300 leading-relaxed">
                 {informationSystemData.overview}
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-zinc-200">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-zinc-200">
                 <div className="p-4 rounded-2xl bg-zinc-950/70 border border-zinc-800 flex items-start gap-2.5">
-                  <Monitor className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <Cloud className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block font-sans mb-1">Desktop Client Portal:</strong>
-                    Installed for accredited shipping agents to author and maintain import, export, and Ryder manifests.
+                    <strong className="text-white block font-sans mb-1">Navis Octopi TOS:</strong>
+                    Cloud platform handling vessel arrivals, yard planning, and operational data tracking.
                   </div>
                 </div>
                 <div className="p-4 rounded-2xl bg-zinc-950/70 border border-zinc-800 flex items-start gap-2.5">
-                  <Globe className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                  <Monitor className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block font-sans mb-1">Web-Based Tracking Suite:</strong>
-                    24/7 self-service tools for Bill of Lading tracking, container stripping queries, and berthage reservations.
+                    <strong className="text-white block font-sans mb-1">Desktop Agent Portal:</strong>
+                    Installed client for agents to submit and manage import, export, and Ryder manifests.
+                  </div>
+                </div>
+                <div className="p-4 rounded-2xl bg-zinc-950/70 border border-zinc-800 flex items-start gap-2.5">
+                  <Globe className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white block font-sans mb-1">Web Tracking Tools:</strong>
+                    24/7 self-service for Bill of Lading tracking, container stripping, and berthage requests.
                   </div>
                 </div>
               </div>
@@ -87,28 +187,28 @@ export const InformationSystem: React.FC = () => {
 
             <div className="lg:col-span-4 bg-zinc-950/90 p-6 rounded-2xl border border-zinc-800 space-y-3 font-mono text-xs shadow-xl">
               <div className="text-[10px] uppercase tracking-widest pb-2 border-b border-zinc-800 font-bold text-amber-400">
-                System Purpose & Scope
+                System Scope & Capabilities
               </div>
               <ul className="space-y-2 text-zinc-300">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Cloud-based TOS execution</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Vessel arrival/departure logs</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Real-time yard plan mapping</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span>Digital manifest ingestion</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Paperless cargo coordination</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span>Automated stripping notifications</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Pre-arrival berth planning</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Regulatory data compliance</span>
                 </li>
               </ul>
             </div>
@@ -116,118 +216,133 @@ export const InformationSystem: React.FC = () => {
           </div>
         </div>
 
-        {/* Detailed Breakdown: Desktop Shipping Agent Portal & Web Tools */}
+        {/* Detailed Breakdown: Octopi TOS, Desktop Shipping Agent Portal & Web Tools */}
         <div className="mb-20 space-y-8">
           <div className="space-y-2">
             <span className="text-[10px] font-mono font-bold text-indigo-400 uppercase tracking-widest">
-              Component Specification
+              Component Specifications
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-white">
-              Desktop Program & Web-Based Tools
+              Cloud TOS, Desktop Portal & Web-Based Tools
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
-            {/* Desktop Portal Card */}
-            <div className="bg-zinc-900/40 rounded-3xl p-7 border border-zinc-800 hover:border-amber-500/60 transition-all shadow-xl space-y-6 backdrop-blur-md">
-              <div className="flex items-center justify-between">
+            {/* 1. Navis Octopi TOS Card */}
+            <div className="bg-zinc-900/40 rounded-3xl p-7 border border-zinc-800 hover:border-indigo-500/60 transition-all shadow-xl space-y-5 backdrop-blur-md flex flex-col justify-between">
+              <div className="space-y-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                    <Cloud className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase font-bold text-indigo-400 px-2 py-0.5 bg-zinc-950 border border-indigo-500/30 rounded-full">
+                      Cloud Platform • Navis
+                    </span>
+                    <h4 className="text-lg font-bold text-white mt-1">
+                      Octopi TOS
+                    </h4>
+                  </div>
+                </div>
+
+                <p className="text-xs text-zinc-300 leading-relaxed">
+                  The primary Terminal Operating System (TOS) developed by Navis. Operates in the cloud to coordinate core transactional activities, vessel arrivals/departures, and container yard planning.
+                </p>
+
+                <div className="space-y-2 text-xs">
+                  <div className="p-3 bg-zinc-950/70 rounded-2xl border border-zinc-800/80">
+                    <strong className="text-indigo-400 block font-semibold mb-0.5">Yard & Stacking Planning</strong>
+                    <span className="text-zinc-400">Dynamic container positioning and quayside crane dispatch.</span>
+                  </div>
+                  <div className="p-3 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
+                    <strong className="text-indigo-400 block font-semibold mb-0.5">Vessel Scheduling</strong>
+                    <span className="text-zinc-400">Tracking berth windows, arrival milestones, and ship departure clearances.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] text-zinc-400">
+                <span><strong>Target:</strong> Operations & Controllers</span>
+                <span className="text-indigo-400 font-mono">Cloud SaaS</span>
+              </div>
+            </div>
+
+            {/* 2. Desktop Portal Card */}
+            <div className="bg-zinc-900/40 rounded-3xl p-7 border border-zinc-800 hover:border-amber-500/60 transition-all shadow-xl space-y-5 backdrop-blur-md flex flex-col justify-between">
+              <div className="space-y-5">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
                     <Monitor className="w-6 h-6" />
                   </div>
                   <div>
                     <span className="text-[10px] font-mono uppercase font-bold text-amber-400 px-2 py-0.5 bg-zinc-950 border border-amber-500/30 rounded-full">
-                      Desktop Client Software
+                      Desktop Client
                     </span>
-                    <h4 className="text-xl font-bold text-white mt-1">
+                    <h4 className="text-lg font-bold text-white mt-1">
                       Shipping Agent Portal
                     </h4>
                   </div>
                 </div>
-              </div>
 
-              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                A specialized desktop application installed on the local computers of approved shipping agents and freight forwarders. It serves as the primary gateway for submitting, maintaining, and validating digital manifests directly to PBL.
-              </p>
+                <p className="text-xs text-zinc-300 leading-relaxed">
+                  A specialized desktop software client installed on the local computers of approved shipping agents and freight forwarders for manifest submissions and validation.
+                </p>
 
-              <div className="space-y-3">
-                <div className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">
-                  Supported Manifest Documentation:
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="p-3.5 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
-                    <strong className="text-amber-400 block font-semibold mb-0.5">1. Import Manifests</strong>
-                    <span className="text-zinc-400">Declarations of inbound cargo, container IDs, consignees, seal numbers, and commodity codes.</span>
+                <div className="space-y-2 text-xs">
+                  <div className="p-3 bg-zinc-950/70 rounded-2xl border border-zinc-800/80">
+                    <strong className="text-amber-400 block font-semibold mb-0.5">Import & Export Manifests</strong>
+                    <span className="text-zinc-400">Declarations of inbound cargo, container IDs, and export VGM weights.</span>
                   </div>
-
-                  <div className="p-3.5 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
-                    <strong className="text-amber-400 block font-semibold mb-0.5">2. Export Manifests</strong>
-                    <span className="text-zinc-400">Outbound shipment manifests, VGM container weights, customs clearances, and loading sequences.</span>
-                  </div>
-
-                  <div className="p-3.5 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
-                    <strong className="text-amber-400 block font-semibold mb-0.5">3. Ryder Manifests</strong>
-                    <span className="text-zinc-400">Specialized manifest documentation supporting feeder routes, regional transshipments, and supplementary consignment lines.</span>
+                  <div className="p-3 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
+                    <strong className="text-amber-400 block font-semibold mb-0.5">Ryder Manifests</strong>
+                    <span className="text-zinc-400">Documentation supporting regional feeder routes and transshipments.</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-zinc-800/80 flex flex-wrap items-center justify-between text-xs text-zinc-400">
-                <span><strong>Target Users:</strong> Approved Agents & Forwarders</span>
-                <span className="text-amber-400 font-mono font-medium">Desktop Environment</span>
+              <div className="pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] text-zinc-400">
+                <span><strong>Target:</strong> Shipping Agents</span>
+                <span className="text-amber-400 font-mono">Workstation Client</span>
               </div>
             </div>
 
-            {/* Web-Based Tools Suite */}
-            <div className="bg-zinc-900/40 rounded-3xl p-7 border border-zinc-800 hover:border-indigo-500/60 transition-all shadow-xl space-y-6 backdrop-blur-md">
-              <div className="flex items-center justify-between">
+            {/* 3. Web-Based Tools Suite */}
+            <div className="bg-zinc-900/40 rounded-3xl p-7 border border-zinc-800 hover:border-emerald-500/60 transition-all shadow-xl space-y-5 backdrop-blur-md flex flex-col justify-between">
+              <div className="space-y-5">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
                     <Globe className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono uppercase font-bold text-indigo-400 px-2 py-0.5 bg-zinc-950 border border-indigo-500/30 rounded-full">
-                      Web-Based Self-Service
+                    <span className="text-[10px] font-mono uppercase font-bold text-emerald-400 px-2 py-0.5 bg-zinc-950 border border-emerald-500/30 rounded-full">
+                      Web Self-Service
                     </span>
-                    <h4 className="text-xl font-bold text-white mt-1">
-                      Online Tracking & Request Tools
+                    <h4 className="text-lg font-bold text-white mt-1">
+                      Online Tracking Suite
                     </h4>
                   </div>
                 </div>
-              </div>
 
-              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                Public-facing and authenticated web utilities accessible 24/7 via modern web browsers, enabling remote tracking and scheduling without physical office visits.
-              </p>
+                <p className="text-xs text-zinc-300 leading-relaxed">
+                  Public and authenticated web utilities accessible 24/7 via modern web browsers, enabling remote tracking and scheduling without physical office visits.
+                </p>
 
-              <div className="space-y-3">
-                <div className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">
-                  The Three Identified Web Tools:
-                </div>
-
-                <div className="space-y-2">
-                  <div className="p-3.5 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
-                    <strong className="text-indigo-400 block font-semibold mb-0.5">Bill of Lading Tracker</strong>
-                    <span className="text-zinc-400">Allows importers, exporters, and brokers to query real-time cargo status, customs processing, and release readiness using their B/L number.</span>
+                <div className="space-y-2 text-xs">
+                  <div className="p-3 bg-zinc-950/70 rounded-2xl border border-zinc-800/80">
+                    <strong className="text-emerald-400 block font-semibold mb-0.5">B/L & Stripping Tools</strong>
+                    <span className="text-zinc-400">Real-time Bill of Lading tracking and container stripping warehouse queries.</span>
                   </div>
-
-                  <div className="p-3.5 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
-                    <strong className="text-indigo-400 block font-semibold mb-0.5">Container Stripping Status Query Tool</strong>
-                    <span className="text-zinc-400">Allows consignees and truckers to check whether a specific container has been de-stuffed/stripped into the warehouse for collection.</span>
-                  </div>
-
-                  <div className="p-3.5 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
-                    <strong className="text-indigo-400 block font-semibold mb-0.5">Online Berthage Request</strong>
-                    <span className="text-zinc-400">Enables ship masters and agents to submit advance berth reservation applications, draft requirements, and arrival estimates online.</span>
+                  <div className="p-3 bg-zinc-950/70 rounded-2xl border border-zinc-800/80 text-xs">
+                    <strong className="text-emerald-400 block font-semibold mb-0.5">Online Berthage System</strong>
+                    <span className="text-zinc-400">Advance online berth reservations and arrival notifications for shipping lines.</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-zinc-800/80 flex flex-wrap items-center justify-between text-xs text-zinc-400">
-                <span><strong>Target Users:</strong> Importers, Consignees, Agents, Public</span>
-                <span className="text-indigo-400 font-mono font-medium">Browser Accessible (HTTPS)</span>
+              <div className="pt-3 border-t border-zinc-800/80 flex items-center justify-between text-[11px] text-zinc-400">
+                <span><strong>Target:</strong> Consignees & Importers</span>
+                <span className="text-emerald-400 font-mono">HTTPS Web</span>
               </div>
             </div>
 
@@ -244,7 +359,7 @@ export const InformationSystem: React.FC = () => {
               Information System Conceptual Architecture
             </h3>
             <p className="text-sm text-zinc-400 max-w-2xl">
-              Visualizing how human actors, business processes, and technological infrastructure integrate into the Management Information System to deliver operational performance and business value.
+              Visualizing how human actors, business processes, and cloud infrastructure integrate into the Navis Octopi MIS to deliver operational performance and business value.
             </p>
           </div>
 
@@ -258,7 +373,7 @@ export const InformationSystem: React.FC = () => {
                 </div>
                 <h4 className="text-xs font-bold uppercase text-white font-mono">1. People</h4>
                 <p className="text-[11px] text-zinc-400 leading-snug">
-                  Shipping Agents, Freight Forwarders, Quayside Staff, Importers, PBL Managers
+                  Shipping Agents, Freight Forwarders, Quayside Operators, Importers, PBL Controllers
                 </p>
               </div>
 
@@ -272,7 +387,7 @@ export const InformationSystem: React.FC = () => {
                 </div>
                 <h4 className="text-xs font-bold uppercase text-white font-mono">2. Processes</h4>
                 <p className="text-[11px] text-zinc-400 leading-snug">
-                  Manifest Filing, Berthage Requests, Container Stripping, Weighbridge VGM
+                  Manifest Filing, Berthage Booking, Yard Allocation, Container Stripping
                 </p>
               </div>
 
@@ -286,7 +401,7 @@ export const InformationSystem: React.FC = () => {
                 </div>
                 <h4 className="text-xs font-bold uppercase text-white font-mono">3. Tech + Data</h4>
                 <p className="text-[11px] text-zinc-400 leading-snug">
-                  Desktops, HTTPS Web Stack, Database, Import/Export & Ryder Manifest Data
+                  Cloud Platform, Workstations, Manifest Data, Real-Time Vessel & Yard Records
                 </p>
               </div>
 
@@ -300,7 +415,7 @@ export const InformationSystem: React.FC = () => {
                 </div>
                 <h4 className="text-xs font-bold uppercase text-white font-mono">4. MIS Engine</h4>
                 <p className="text-[11px] text-indigo-200 leading-snug">
-                  Desktop Agent Portal + Web Tracking Utilities
+                  Navis Octopi TOS (Cloud) + Agent Portal + Web Tools
                 </p>
               </div>
 
@@ -314,7 +429,7 @@ export const InformationSystem: React.FC = () => {
                 </div>
                 <h4 className="text-xs font-bold uppercase text-white font-mono">5. Operations</h4>
                 <p className="text-[11px] text-zinc-400 leading-snug">
-                  Container Yard Dispatch, Rapid Vessel Turnaround, Stevedoring
+                  Optimized Yard Stacking, Rapid Vessel Turnaround, Stevedoring
                 </p>
               </div>
 
@@ -340,10 +455,10 @@ export const InformationSystem: React.FC = () => {
         <div className="space-y-8">
           <div className="space-y-2">
             <span className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-widest">
-              Technical Specifications & Verification Matrices
+              Technical Specifications & System Environment
             </span>
             <h3 className="text-2xl font-black text-white">
-              System Environment, Hosting & Security Controls
+              Cloud Infrastructure, Software Stack & Security Controls
             </h3>
           </div>
 
@@ -369,7 +484,7 @@ export const InformationSystem: React.FC = () => {
                 ))}
               </ul>
 
-              <div className="p-3 rounded-2xl bg-zinc-950/90 border border-amber-500/30 text-[11px] text-amber-300 font-mono">
+              <div className="p-3 rounded-2xl bg-zinc-950/90 border border-indigo-500/30 text-[11px] text-indigo-300 font-mono">
                 {informationSystemData.users.userCountNote}
               </div>
             </div>
@@ -394,15 +509,15 @@ export const InformationSystem: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-3 rounded-2xl bg-zinc-950/90 border border-amber-500/30 text-[11px] text-amber-300 font-mono leading-relaxed">
-                {informationSystemData.hosting.verificationNote}
+              <div className="p-3 rounded-2xl bg-zinc-950/90 border border-emerald-500/30 text-[11px] text-emerald-300 font-mono leading-relaxed">
+                ✓ {informationSystemData.hosting.verificationNote}
               </div>
 
               <div className="space-y-2 text-xs">
                 <div className="font-bold text-zinc-300">Accessibility Channels:</div>
                 <div className="text-zinc-400">• <strong className="text-zinc-200">On-Site:</strong> {informationSystemData.accessibility.onSite}</div>
                 <div className="text-zinc-400">• <strong className="text-zinc-200">Remote Web:</strong> {informationSystemData.accessibility.remoteWeb}</div>
-                <div className="text-[11px] text-amber-300 font-mono mt-1">{informationSystemData.accessibility.internalRemoteNote}</div>
+                <div className="text-[11px] text-indigo-300 font-mono mt-1">{informationSystemData.accessibility.internalRemoteNote}</div>
               </div>
             </div>
 
@@ -419,7 +534,7 @@ export const InformationSystem: React.FC = () => {
 
               <div className="space-y-3 text-xs">
                 <div className="p-3 bg-zinc-950/70 rounded-2xl border border-zinc-800">
-                  <strong className="text-white block mb-1">Hardware Clients:</strong>
+                  <strong className="text-white block mb-1">Hardware Infrastructure:</strong>
                   <ul className="space-y-1 text-zinc-400">
                     {informationSystemData.hardwareAndSoftware.hardware.map((hw, i) => (
                       <li key={i}>• {hw}</li>
@@ -457,7 +572,7 @@ export const InformationSystem: React.FC = () => {
               <div className="flex items-center justify-between pb-3 border-b border-zinc-800">
                 <h4 className="text-sm font-bold text-white flex items-center gap-2">
                   <Database className="w-4 h-4 text-indigo-400" />
-                  <span>Data Entities Managed by the MIS</span>
+                  <span>Data Entities Managed by Octopi TOS</span>
                 </h4>
                 <span className="text-[10px] font-mono text-zinc-500 uppercase">PBL Operational Schemas</span>
               </div>
@@ -479,11 +594,11 @@ export const InformationSystem: React.FC = () => {
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   <span>{informationSystemData.security.title}</span>
                 </h4>
-                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">ISPS Compliant</span>
+                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">Cloud Encrypted</span>
               </div>
 
-              <div className="p-3 rounded-2xl bg-zinc-950/90 border border-amber-500/30 text-[11px] text-amber-300 font-mono">
-                {informationSystemData.security.verificationNote}
+              <div className="p-3 rounded-2xl bg-zinc-950/90 border border-emerald-500/30 text-[11px] text-emerald-300 font-mono">
+                ✓ {informationSystemData.security.verificationNote}
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">

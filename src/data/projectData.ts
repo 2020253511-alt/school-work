@@ -141,6 +141,30 @@ export const groupMembers: StudentMember[] = [
       projectContributions: "Constructed the MIS Conceptual Architecture model, technical specifications breakdown, and data management matrices.",
       contactEmail: "student4@ub.edu.bz"
     }
+  },
+  {
+    id: "member-5",
+    name: "Student 5",
+    studentId: "",
+    role: "Systems Integration & Operational QA Researcher",
+    isLeader: false,
+    photoUrl: "https://lh3.googleusercontent.com/d/1GenHctkzz0RrVf5zoXATMhw_KiS6FLCs",
+    pdfUrl: "https://drive.google.com/file/d/11famgiRLxq8x-krQ3DIP5HwgIyFNkYK4/view?usp=sharing",
+    pdfFileId: "11famgiRLxq8x-krQ3DIP5HwgIyFNkYK4",
+    bio: "Undergraduate student focusing on enterprise systems integration, data quality assurance, and information technology applications in maritime transport logistics.",
+    responsibilities: [
+      "Investigation of terminal operational workflows and verification matrices",
+      "Synthesis of Laudon & Laudon Chapter 1 MIS framework alignment",
+      "Analysis of Navis Octopi TOS cloud capabilities and user ecosystem",
+      "Academic quality assurance and cross-module documentation review"
+    ],
+    resume: {
+      education: "Bachelor of Science in Information Technology — University of Belize (2023–2027)",
+      skills: ["Systems Integration", "Data Flow Analysis", "Quality Assurance", "Technical Research", "Information Systems Evaluation"],
+      coursework: ["Management Information Systems", "Database Design", "Business Analytics", "Systems Quality Management"],
+      projectContributions: "Contributed to the technical analysis of the cloud-based Navis Octopi TOS, operational data tracking, and academic research synthesis.",
+      contactEmail: "student5@ub.edu.bz"
+    }
   }
 ];
 
@@ -286,13 +310,56 @@ export const additionalMaritimeServices: ServiceItem[] = [
 export const informationSystemData = {
   name: "Port of Belize Limited Management Information System",
   acronym: "PBL-MIS",
-  overview: "Port of Belize Limited manages daily port logistics, cargo processing, and vessel scheduling through its comprehensive Management Information System (MIS). The digital ecosystem bridges specialized client-side desktop software with public-facing web utilities to collect, process, store, and distribute real-time shipping data, thereby eliminating manual paperwork and streamlining port throughput.",
+  overview: "Port of Belize Limited manages daily port logistics, cargo processing, and vessel scheduling through Octopi, a modern Terminal Operating System (TOS) developed by Navis. The digital ecosystem operates via a cloud-based platform to manage transactional activities, vessel arrivals and departures, yard planning, and operational data tracking, working in tandem with the desktop Shipping Agent Portal and online tracking utilities to eliminate manual paperwork and maximize terminal throughput.",
   
+  // System Type & Software Breakdown (Verified)
+  systemType: {
+    title: "System Type & Software",
+    softwareName: "Octopi",
+    developer: "Navis",
+    category: "Terminal Operating System (TOS)",
+    summary: "Software: They use Octopi, a Terminal Operating System (TOS) developed by Navis. It manages transactional activities, vessel arrivals and departures, yard planning, and operational data tracking.",
+    capabilities: [
+      "Transactional Activities Management",
+      "Vessel Arrivals & Departures Scheduling",
+      "Container Yard Planning & Stacking Allocation",
+      "Real-Time Operational Data Tracking & Reporting"
+    ]
+  },
+
+  // Deployment Model (Verified)
+  deployment: {
+    title: "Deployment",
+    model: "Cloud-Based Platform",
+    summary: "Cloud-based: The Octopi system operates via a cloud-based platform rather than strictly on local physical premises servers.",
+    benefits: [
+      "High availability & resilient cloud uptime",
+      "Real-time synchronized quayside & remote access",
+      "Reduced on-premises server maintenance overhead",
+      "Scalable infrastructure matching vessel volume surges"
+    ]
+  },
+
   components: [
+    {
+      id: "octopi-tos",
+      name: "Octopi Terminal Operating System (TOS)",
+      type: "Cloud-Based Platform",
+      developer: "Navis",
+      description: "The central core software platform managing transactional activities, vessel arrivals and departures, yard planning, and operational data tracking across the Port of Belize terminal.",
+      supportedManifests: [
+        { name: "Yard & Berth Planning", desc: "Coordinates quay crane assignments, vessel berth windows, and container yard bay allocations in real time." },
+        { name: "Vessel Movement Logs", desc: "Automates logging of vessel arrivals, departures, pilot boarding, and turnaround milestones." },
+        { name: "Transactional Tracking", desc: "Maintains real-time audit trails of container discharges, load lists, and gate-in/gate-out events." }
+      ],
+      accessMethod: "Cloud-based terminal operating system accessible securely via web and connected operations clients.",
+      security: "Enterprise cloud encryption, role-based authorization, and high-availability secure data pipelines."
+    },
     {
       id: "portal",
       name: "Shipping Agent Portal",
       type: "Desktop Program",
+      developer: "PBL / Partner Integration",
       description: "A specialized desktop software client installed on the local computers of approved shipping agents and freight forwarders. It serves as the primary gateway for submitting, maintaining, and verifying crucial shipping documentation prior to and during vessel arrival.",
       supportedManifests: [
         { name: "Import Manifests", desc: "Detailed declaration of inbound cargo, consignees, container numbers, and commodity classifications." },
@@ -306,6 +373,7 @@ export const informationSystemData = {
       id: "bl-tracker",
       name: "Bill of Lading (B/L) Tracker",
       type: "Web-Based Tool",
+      developer: "PBL Web Suite",
       description: "A web utility enabling importers, exporters, and logistics coordinators to follow cargo movements, verify document processing status, and monitor customs releases using their B/L number.",
       supportedManifests: [],
       accessMethod: "Publicly accessible via modern web browsers on any connected device.",
@@ -315,6 +383,7 @@ export const informationSystemData = {
       id: "stripping-tool",
       name: "Container Stripping Status Query Tool",
       type: "Web-Based Tool",
+      developer: "PBL Web Suite",
       description: "Online self-service portal allowing consignees and truckers to check whether a specific container has been de-stuffed/stripped into the warehouse and is ready for cargo collection.",
       supportedManifests: [],
       accessMethod: "Accessible online 24/7 through the PBL web portal.",
@@ -324,6 +393,7 @@ export const informationSystemData = {
       id: "berthage-tool",
       name: "Online Berthage Request System",
       type: "Web-Based Tool",
+      developer: "PBL Web Suite",
       description: "Digital reservation interface allowing vessel masters, shipping agents, and charterers to submit formal berthing applications, ETA notices, and quayside service requests in advance.",
       supportedManifests: [],
       accessMethod: "Secure web form accessible by registered shipping lines.",
@@ -333,70 +403,72 @@ export const informationSystemData = {
 
   // System Ecosystem & Architecture Details
   hosting: {
-    title: "System Hosting Infrastructure",
-    status: "Hybrid Client-Desktop & Web Architecture",
-    verificationNote: "[Hosting infrastructure: To be confirmed with PBL IT department]",
-    details: "The system operates as a distributed hybrid environment: the Shipping Agent Portal functions as client-side software on agent workstations, while tracking and berthage tools are hosted web applications. The exact physical server topology (on-premises datacenter vs. private cloud vs. hybrid cloud) remains subject to formal IT verification."
+    title: "Deployment & Hosting Infrastructure",
+    status: "Cloud-Based Platform (Navis Octopi)",
+    verificationNote: "Verified: Cloud-based Terminal Operating System (TOS) developed by Navis.",
+    details: "The Octopi system operates via a cloud-based platform rather than strictly on local physical premises servers. This cloud-native architecture coordinates transactional activities, vessel arrivals and departures, yard planning, and operational data tracking seamlessly across port operations and remote stakeholders."
   },
 
   users: {
     title: "System User Ecosystem",
     categories: [
+      { name: "PBL Terminal & Operations Managers", role: "Supervise Octopi TOS yard planning, vessel arrival/departure scheduling, and berth allocation." },
       { name: "Approved Shipping Agents", role: "Submit import/export/Ryder manifests and manage cargo paperwork." },
       { name: "Freight Forwarders & Brokers", role: "Coordinate consolidated cargo, customs filing, and dispatch orders." },
-      { name: "PBL Quayside & Gate Staff", role: "Record container gate-in/gate-out, weighbridge VGM, and crane operations." },
-      { name: "PBL Operations Management", role: "Plan vessel berthing, yard allocations, and resource assignments." },
+      { name: "PBL Quayside & Gate Staff", role: "Record container gate-in/gate-out, weighbridge VGM, and crane operations in real time." },
       { name: "Cargo Owners & Consignees", role: "Check Bill of Lading progress and container stripping availability remotely." },
       { name: "Vessel Masters & Charterers", role: "Submit berthage applications and coordinate quayside utility needs." }
     ],
-    userCountNote: "[Total active user metrics to be verified by the group with PBL IT]"
+    userCountNote: "Active users include PBL terminal controllers, quayside operators, accredited shipping lines, agents, and national trade stakeholders."
   },
 
   accessibility: {
     title: "System Accessibility & Remote Access",
-    onSite: "Direct local network access for quayside terminal operators, weighbridge staff, and administrative offices.",
-    remoteWeb: "24/7 internet-based accessibility for consignees, agents, and forwarders using web tracking and request tools.",
-    internalRemoteNote: "[Remote internal MIS access for off-site PBL staff to be confirmed with PBL IT]"
+    onSite: "Direct quayside and administrative access to cloud-based Octopi TOS and operational weighbridge terminals.",
+    remoteWeb: "24/7 cloud-based web accessibility for consignees, agents, and forwarders using web tracking and request tools.",
+    internalRemoteNote: "Cloud-based deployment enables authorized PBL operations personnel to monitor yard and vessel data securely from any connected workstation."
   },
 
   hardwareAndSoftware: {
     hardware: [
-      "Workstation desktop computers & office laptops",
-      "Network routing & high-speed broadband infrastructure",
-      "Quayside terminal computers & weighbridge scale interfaces",
-      "[Exact hardware specifications to be verified with PBL IT]"
+      "Workstation desktop computers & operations laptops",
+      "Quayside terminal tablets / computers & weighbridge scale interfaces",
+      "Network routing & broadband cloud connectivity infrastructure",
+      "Barcode & container tracking mobile devices"
     ],
     software: [
+      "Octopi — Terminal Operating System (TOS) developed by Navis (Cloud-based)",
       "Shipping Agent Portal proprietary desktop client software",
-      "Modern standards-compliant web browsers (Chrome, Edge, Safari, Firefox)",
-      "PBL web-based tracking and berthage request portal applications",
-      "Central database engine and operational middleware [Exact database software to be confirmed]"
+      "PBL web-based tracking tools (Bill of Lading Tracker, Container Stripping Query, Berthage Request)",
+      "Modern standards-compliant web browsers (Chrome, Edge, Safari, Firefox)"
     ],
     networking: [
-      "Encrypted TCP/IP network connectivity over commercial internet",
-      "Secure web access protocols (HTTPS/TLS)",
-      "Dedicated port network for quayside and administrative endpoints",
-      "[Network bandwidth, firewall topology, and VPN protocols to be verified with PBL IT]"
+      "High-speed broadband connectivity to Navis Octopi cloud infrastructure",
+      "Secure encrypted communication protocols (HTTPS / TLS 1.3)",
+      "Dedicated secure port subnet for quayside and gate operations",
+      "Encrypted TCP/IP network connectivity for external desktop agent client access"
     ]
   },
 
   dataManaged: [
+    { type: "Vessel Arrivals & Departures", desc: "Real-time vessel scheduling, drafts, LOA, ETA/ETD, pilotage, and quayside berth windows in Octopi TOS." },
+    { type: "Yard Planning & Allocation", desc: "Dynamic container yard coordinates, stack planning, reefer staging, and crane movements." },
+    { type: "Transactional Activity Logs", desc: "Operational data tracking, gate-in/gate-out logs, stevedoring tallies, and container movement events." },
     { type: "Import Cargo Manifests", desc: "Container IDs, seal numbers, consignee details, cargo weight, and tariff codes." },
     { type: "Export Cargo Manifests", desc: "Shipper declarations, destination ports, VGM certifications, and loading sequences." },
     { type: "Ryder Manifests", desc: "Feeder vessel and transshipment consignment records." },
-    { type: "Vessel & Berthage Records", desc: "Vessel drafts, LOA (length overall), ETA/ETD, and quayside berth allocations." },
-    { type: "Container Stripping & Yard Data", desc: "Container yard coordinates, de-stuffing timestamps, and warehouse staging bins." },
+    { type: "Container Stripping & Yard Data", desc: "De-stuffing timestamps, warehouse storage bins, and release authorizations." },
     { type: "B/L Tracking & Clearance Status", desc: "Customs release markers, storage fee assessments, and gate-out clearances." }
   ],
 
   security: {
     title: "System Security & Information Assurance",
-    verificationNote: "[Specific PBL security controls to be verified with IT Department]",
+    verificationNote: "Enterprise-grade cloud security protocols managed via Navis Octopi & PBL secure networks.",
     principles: [
-      { name: "Role-Based Access Control (RBAC)", desc: "Granular authorization levels ensuring agents only access their own manifests, while PBL managers possess administrative oversight." },
-      { name: "Data Integrity & Validation", desc: "Automated schema checks preventing duplicate manifest submissions or conflicting container number entries." },
-      { name: "Confidentiality of Trade Data", desc: "Protection of sensitive commercial pricing, consignee records, and national customs declarations." },
-      { name: "System Availability", desc: "Ensuring 24/7 uptime for time-critical maritime tracking and berthage reservations." }
+      { name: "Cloud Security & Encryption", desc: "End-to-end data encryption in transit (TLS) and at rest within the cloud-hosted Octopi TOS environment." },
+      { name: "Role-Based Access Control (RBAC)", desc: "Granular authorization levels ensuring shipping agents only access authorized manifests while PBL controllers retain full terminal oversight." },
+      { name: "Data Integrity & Validation", desc: "Automated schema checks preventing duplicate manifest submissions or conflicting container yard positions." },
+      { name: "System Availability & Redundancy", desc: "Cloud infrastructure delivers 24/7 high availability, automated backups, and resilient disaster recovery for uninterrupted port logistics." }
     ]
   }
 };

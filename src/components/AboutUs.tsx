@@ -26,7 +26,7 @@ export const AboutUs: React.FC = () => {
         </div>
 
         {/* Group Members Grid (Standardized 3:5 Card Template for Every Member) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6">
           {groupMembers.map((member) => {
             return (
               <div
