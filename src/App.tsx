@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
 import { AboutUs } from './components/AboutUs';
 import { Organization } from './components/Organization';
 import { InformationSystem } from './components/InformationSystem';
@@ -22,19 +23,22 @@ export default function App() {
         {/* Main Content Sections */}
         <main className="flex-1">
           
-          {/* 1. About Us (Student Team Profiles, Resumes & Collaboration Matrix) */}
+          {/* 1. Hero Section (Home) */}
+          <Hero onOpenGuide={() => setGuideOpen(true)} />
+
+          {/* 2. About Us (Student Team Profiles, Resumes & Collaboration Matrix) */}
           <AboutUs />
 
-          {/* 2. Organization Profile (PBL, 10 Core Services, 10 Maritime Services, Mission/Vision) */}
+          {/* 3. Organization Profile (PBL, 10 Core Services, 10 Maritime Services, Mission/Vision) */}
           <Organization />
 
-          {/* 3. Information System (Navis Octopi TOS, Desktop Agent Portal, Web Tools, Architecture) */}
+          {/* 4. Information System (Navis Octopi TOS, Desktop Agent Portal, Web Tools, Architecture) */}
           <InformationSystem />
 
-          {/* 4. Strategic Business Value (Laudon 6 Objectives, Impact Matrix, Synthesis Table, Conclusion) */}
+          {/* 5. Strategic Business Value (Laudon 6 Objectives, Impact Matrix, Synthesis Table, Conclusion) */}
           <BusinessValue />
 
-          {/* 5. Contact Us (UB Campus Map, Contact Details & Evaluation Submission) */}
+          {/* 6. Contact Us (UB Campus Map, Contact Details & Evaluation Submission) */}
           <ContactUs />
 
         </main>
